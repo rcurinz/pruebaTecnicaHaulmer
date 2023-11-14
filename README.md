@@ -12,6 +12,8 @@ Luego se debe ejecutar el contenedor con el siguiente comando:
 ```
 docker run -p 5001:5001 pruebatecnica
 ```
+En caso de problemas con el puerto, se debe cambiar el puerto de la izquierda por el puerto que se desee.
+
 
 ## Collection de Postman
 Se adjunta una collection de Postman con los endpoints del proyecto.
