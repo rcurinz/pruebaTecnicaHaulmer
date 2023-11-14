@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "f42fc2b6-a194-435d-b95e-f5a49a8b3418",
+		"name": "EventosPruebaTecnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4224081"
+	},
+	"item": [
+		{
+			"name": "/events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/eventos/getevents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"eventos",
+						"getevents"
+					]
+				},
+				"description": "Retorna todos los eventos disponibles"
+			},
+			"response": []
+		},
+		{
+			"name": "/event",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/eventos/getevent/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"eventos",
+						"getevent",
+						"3"
+					]
+				},
+				"description": "Retorna el evento solicitado por id"
+			},
+			"response": []
+		},
+		{
+			"name": "/purchase",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_client\":\"1\",\r\n    \"id_event\":\"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/eventos/sellticket",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"eventos",
+						"sellticket"
+					]
+				},
+				"description": "Realiza una compra de un ticket indicando id de usuario e id de evento"
+			},
+			"response": []
+		},
+		{
+			"name": "/orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/eventos/orders/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"eventos",
+						"orders",
+						"1"
+					]
+				},
+				"description": "Retorna todas las compras realizadas por cliente"
+			},
+			"response": []
+		},
+		{
+			"name": "/clients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/eventos/getclients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"eventos",
+						"getclients"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
