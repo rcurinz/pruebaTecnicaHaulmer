@@ -3,6 +3,8 @@ from flask import Blueprint, jsonify, request
 from models import *
 eventos = Blueprint('eventos', __name__, url_prefix='/eventos')
 
+
+# all events
 @eventos.route('/events', methods=['GET'])
 def get_events():
     eventos = Events.query.all()
@@ -23,6 +25,7 @@ def get_events():
     return jsonify(data)
 
 
+# event by id
 @eventos.route('/event/<id>', methods=['GET'])
 def get_event(id):
     evento = Events.query.filter_by(id=id).first()
@@ -59,7 +62,7 @@ def sell_ticket():
 
             event.tickets_sold += 1
 
-            # Realizar ambas operaciones dentro de un solo commit
+            # realizar los cambios en la base de datos
             db.session.commit()
 
             return jsonify({'message': 'Ticket vendido'})
