@@ -1,5 +1,6 @@
 from . import db
 
+
 class Purchases(db.Model):
     __tablename__ = 'purchases'
 

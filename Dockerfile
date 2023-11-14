@@ -8,7 +8,7 @@ COPY . /pruebaTecnicaHaulmer
 
 RUN pip --no-cache-dir install -r requirements.txt
 
-EXPOSE 5000
+EXPOSE 5001
 
 CMD ["python", "run.py"]
 

@@ -16,5 +16,8 @@ db.init_app(app)
 app.register_blueprint(eventos)
 
 
+@app.route('/')
+def index():
+    return "it's working"
 
 

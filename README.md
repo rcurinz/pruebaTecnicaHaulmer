@@ -10,13 +10,19 @@ docker build -t pruebatecnica .
 ```
 Luego se debe ejecutar el contenedor con el siguiente comando:
 ```
-docker run -p 5000:5000 pruebatecnica
+docker run -p 5001:5001 pruebatecnica
 ```
 
+## Collection de Postman
+Se adjunta una collection de Postman con los endpoints del proyecto.
+Con nombre: 
+- EventosPruebaTecnica.postman_collection.json
+
+
 ## Uso
-Para usar el proyecto se debe hacer una petición POST a la siguiente URL:
+Para usar el proyecto se debe hacer una petición GET a la siguiente URL:
 ```
-http://localhost:5000/eventos/getevents
+http://localhost:5001/eventos/getevents
 ```
 La respuesta debe tener el siguiente formato:
 ```
@@ -49,7 +55,7 @@ Donde los campos son:
 
 Para comprar un ticket se debe hacer una petición POST a la siguiente URL:
 ```
-http://localhost:5000/eventos/sellticket
+http://localhost:5001/eventos/sellticket
 ```
 La petición debe tener el siguiente formato:
 ```
@@ -69,9 +75,9 @@ La respuesta debe tener el siguiente formato:
 }
 ```
 
-Para obtener los tickets de un cliente se debe hacer una petición POST a la siguiente URL:
+Para obtener los tickets de un cliente se debe hacer una petición GET a la siguiente URL:
 ```
-http://localhost:5000/eventos/orders/1
+http://localhost:5001/eventos/orders/1
 ```
 Donde el último número es el identificador del cliente.
 
@@ -108,9 +114,9 @@ Donde los campos son:
 
 
 
-Para obtener la información de un evento se debe hacer una petición POST a la siguiente URL:
+Para obtener la información de un evento se debe hacer una petición GET a la siguiente URL:
 ```
-http://localhost:5000/eventos/getevent/3
+http://localhost:5001/eventos/getevent/3
 ```
 Donde el último número es el identificador del evento.
 
@@ -141,9 +147,9 @@ Donde los campos son:
 - tickets_sold: Cantidad de tickets vendidos
 
 
-Para listar todos los clientes se debe hacer una petición POST a la siguiente URL:
+Para listar todos los clientes se debe hacer una petición GET a la siguiente URL:
 ```
-http://localhost:5000/eventos/getclients
+http://localhost:5001/eventos/getclients
 ```
 
 La respuesta debe tener el siguiente formato:
