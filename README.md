@@ -22,9 +22,11 @@ Con nombre:
 
 
 ## Uso
-Para usar el proyecto se debe hacer una petición GET a la siguiente URL:
+Para usar el proyecto se deben hacer las peticiónes a las siguientes URLs:
+
+Para listar todos los eventos se debe hacer una petición GET a la siguiente URL:
 ```
-http://localhost:5001/eventos/getevents
+http://localhost:5001/eventos/events
 ```
 La respuesta debe tener el siguiente formato:
 ```
@@ -57,7 +59,7 @@ Donde los campos son:
 
 Para comprar un ticket se debe hacer una petición POST a la siguiente URL:
 ```
-http://localhost:5001/eventos/sellticket
+http://localhost:5001/eventos/purchase
 ```
 La petición debe tener el siguiente formato:
 ```
@@ -118,7 +120,7 @@ Donde los campos son:
 
 Para obtener la información de un evento se debe hacer una petición GET a la siguiente URL:
 ```
-http://localhost:5001/eventos/getevent/3
+http://localhost:5001/eventos/event/3
 ```
 Donde el último número es el identificador del evento.
 
@@ -151,7 +153,7 @@ Donde los campos son:
 
 Para listar todos los clientes se debe hacer una petición GET a la siguiente URL:
 ```
-http://localhost:5001/eventos/getclients
+http://localhost:5001/eventos/clients
 ```
 
 La respuesta debe tener el siguiente formato:

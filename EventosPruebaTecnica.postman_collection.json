@@ -12,7 +12,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5001/eventos/getevents",
+					"raw": "http://localhost:5001/eventos/events",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -20,7 +20,7 @@
 					"port": "5001",
 					"path": [
 						"eventos",
-						"getevents"
+						"events"
 					]
 				},
 				"description": "Retorna todos los eventos disponibles"
@@ -33,7 +33,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5001/eventos/getevent/3",
+					"raw": "http://localhost:5001/eventos/event/3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -41,7 +41,7 @@
 					"port": "5001",
 					"path": [
 						"eventos",
-						"getevent",
+						"event",
 						"3"
 					]
 				},
@@ -56,7 +56,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id_client\":\"1\",\r\n    \"id_event\":\"3\"\r\n}",
+					"raw": "{\r\n    \"id_client\":\"2\",\r\n    \"id_event\":\"3\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -64,7 +64,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5001/eventos/sellticket",
+					"raw": "http://localhost:5001/eventos/purchase",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -72,7 +72,7 @@
 					"port": "5001",
 					"path": [
 						"eventos",
-						"sellticket"
+						"purchase"
 					]
 				},
 				"description": "Realiza una compra de un ticket indicando id de usuario e id de evento"
@@ -85,7 +85,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5001/eventos/orders/1",
+					"raw": "http://localhost:5001/eventos/orders/2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -94,7 +94,7 @@
 					"path": [
 						"eventos",
 						"orders",
-						"1"
+						"2"
 					]
 				},
 				"description": "Retorna todas las compras realizadas por cliente"
@@ -107,7 +107,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5001/eventos/getclients",
+					"raw": "http://localhost:5001/eventos/clients",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -115,7 +115,7 @@
 					"port": "5001",
 					"path": [
 						"eventos",
-						"getclients"
+						"clients"
 					]
 				}
 			},

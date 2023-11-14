@@ -3,7 +3,7 @@ from flask import Blueprint, jsonify, request
 from models import *
 eventos = Blueprint('eventos', __name__, url_prefix='/eventos')
 
-@eventos.route('/getevents', methods=['GET'])
+@eventos.route('/events', methods=['GET'])
 def get_events():
     eventos = Events.query.all()
     data = []
@@ -23,7 +23,7 @@ def get_events():
     return jsonify(data)
 
 
-@eventos.route('/getevent/<id>', methods=['GET'])
+@eventos.route('/event/<id>', methods=['GET'])
 def get_event(id):
     evento = Events.query.filter_by(id=id).first()
     data = []
@@ -43,7 +43,7 @@ def get_event(id):
 
 
 # sell ticket
-@eventos.route('/sellticket', methods=['POST'])
+@eventos.route('/purchase', methods=['POST'])
 def sell_ticket():
     try:
         data = request.get_json()
@@ -104,7 +104,7 @@ def list_purchases(id):
 
 
 # get all clients
-@eventos.route('/getclients', methods=['GET'])
+@eventos.route('/clients', methods=['GET'])
 def get_clients():
     clientes = Clients.query.all()
     data = []
